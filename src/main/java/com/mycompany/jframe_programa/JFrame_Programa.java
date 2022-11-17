@@ -13,10 +13,7 @@ import javax.swing.JFrame;
 public class JFrame_Programa {
 
     public static void main(String[] args) {
-        var ventana01 = new Ventana01("Ventana 01");
-
-        ventana01.iniciarComponentes();
-        ventana01.setVisible(true);
-
+        var ventana2 = new  Ventana01("Ventana principal");
+        
     }
 }
