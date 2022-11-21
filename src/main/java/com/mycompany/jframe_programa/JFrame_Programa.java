@@ -13,7 +13,8 @@ import javax.swing.JFrame;
 public class JFrame_Programa {
 
     public static void main(String[] args) {
-        var ventana2 = new  Ventana01("Ventana principal");
+       // var ventana2 = new  Ventana01("Ventana principal");
+         var ventana3 = new  Ventana03();
         
     }
 }

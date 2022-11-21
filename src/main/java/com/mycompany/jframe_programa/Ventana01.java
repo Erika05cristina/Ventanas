@@ -11,6 +11,7 @@ import java.awt.HeadlessException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -72,24 +73,30 @@ public class Ventana01 extends JFrame {
     public void iniciarLabel() {
         this.jLabelList = new ArrayList<>();
         this.jLabelImg = new ArrayList<>();
+        
+         JLabel etiqueta = new JLabel(new ImageIcon("icoEcuador.png"));
+          etiqueta.setBounds(10, 80, 400, 300);
+          this.jPanelList.get(1).add(etiqueta);
 
-        //JLabel labelImagen;
         var labelImagen = new JLabel();
-
+       
         labelImagen.setBounds(50, 70, 400, 350);
-        labelImagen.setIcon(new ImageIcon("icoEcuador.png"));
+        labelImagen.add(new JLabel(new ImageIcon("icoEcuador.png")));
+        labelImagen.setBounds(10, 80, 400, 300);
+        //labelImagen.setIcon(new ImageIcon("icoEcuador.png"));
 
         this.jLabelImg.add(labelImagen);
-         this.getContentPane().add(this.jLabelImg.get(0));
-        
-        this.jLabelList.add(new JLabel("Qatar"));
-        this.jLabelList.add(new JLabel("imgEcu"));
-        this.jLabelList.add(new JLabel("Ecuador"));
+        this.getContentPane().add(this.jLabelImg.get(0));
 
+        this.jLabelList.add(new JLabel("Qatar"));
+        this.jLabelList.add(new JLabel("Ecuador"));
+        this.jLabelList.add(new JLabel("Clombia"));
+        
+        this.jPanelList.get(3).add(this.jLabelImg.get(0));
         this.jPanelList.get(0).add(this.jLabelList.get(0));
-        this.jPanelList.get(0).add(this.jLabelImg.get(0));
+
+        this.jPanelList.get(0).add(this.jLabelList.get(1));
         this.jPanelList.get(0).add(this.jLabelList.get(2));
 
     }
-
 }
