@@ -73,13 +73,16 @@ public class Ventana01 extends JFrame {
     public void iniciarLabel() {
         this.jLabelList = new ArrayList<>();
         this.jLabelImg = new ArrayList<>();
-        
+        /*
          JLabel etiqueta = new JLabel(new ImageIcon("icoEcuador.png"));
           etiqueta.setBounds(10, 80, 400, 300);
           this.jPanelList.get(1).add(etiqueta);
-
+         */
+        JLabel etiqueta = new JLabel(new ImageIcon("imgs/icoEcuador.png"));
+        etiqueta.setBounds(10, 80, 400, 300);
+        this.jPanelList.get(1).add(etiqueta);
         var labelImagen = new JLabel();
-       
+
         labelImagen.setBounds(50, 70, 400, 350);
         labelImagen.add(new JLabel(new ImageIcon("icoEcuador.png")));
         labelImagen.setBounds(10, 80, 400, 300);
@@ -91,7 +94,7 @@ public class Ventana01 extends JFrame {
         this.jLabelList.add(new JLabel("Qatar"));
         this.jLabelList.add(new JLabel("Ecuador"));
         this.jLabelList.add(new JLabel("Clombia"));
-        
+
         this.jPanelList.get(3).add(this.jLabelImg.get(0));
         this.jPanelList.get(0).add(this.jLabelList.get(0));
 

@@ -18,11 +18,12 @@ import javax.swing.JPanel;
  *
  * @author Kristina
  */
-public class Ventana03 extends JFrame {
+public class Ventana04 extends JFrame {
 
+    private List<JPanel> jPanelListPrincipal;
     private List<JPanel> jPanelList;
 
-    public Ventana03() throws HeadlessException {
+    public Ventana04() throws HeadlessException {
 
         this.setTitle("Grid Layout");
         this.setSize(800, 600);
@@ -37,30 +38,21 @@ public class Ventana03 extends JFrame {
 
     public void iniciarPaneles() {
 
+        this.jPanelListPrincipal = new ArrayList<>();        
         this.jPanelList = new ArrayList<>();
+        
+        for(int i =0; i <5;i++){
+             this.jPanelListPrincipal.add(new JPanel());
+        }
 
-        /*
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-        this.jPanelList.add(new JPanel());
-         */
         for (int x = 0; x < 22; x++) {
             this.jPanelList.add(new JPanel());
         }
+        
+        this.jPanelListPrincipal.get(0).setLayout(new GridLayout(3,3));
+        this.jPanelListPrincipal.get(1).setLayout(new GridLayout(3,3));
+        this.jPanelListPrincipal.get(2).setLayout(new GridLayout(3,3));
+        
 
         this.jPanelList.get(0).setLayout(new GridLayout(2, 2));
         this.jPanelList.get(1).setLayout(new GridLayout(1, 1));
